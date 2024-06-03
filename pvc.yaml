@@ -26,7 +26,7 @@ metadata:
   namespace: mgnifybranchwater-hl-prod
 spec:
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   resources:
     requests:
       storage: 5Gi
@@ -41,7 +41,7 @@ metadata:
   namespace: mgnifybranchwater-hl-prod
 spec:
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   resources:
     requests:
       storage: 1Gi
