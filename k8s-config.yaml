@@ -15,8 +15,8 @@ items:
         kubernetes.io/ingress.class: "nginx"
     spec:
       rules:
-#        - host: branchwater.dev.mgnify.org
-         - http:
+        - host: branchwater.dev.mgnify.org
+          http:
             paths:
               - path: /
                 pathType: Prefix
