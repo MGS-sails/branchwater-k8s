@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ebi-metagenomics-client-service
+  namespace: mgnifybranchwater-hl-prod
+spec:
+  selector:
+    app: ebi-metagenomics-client
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 80

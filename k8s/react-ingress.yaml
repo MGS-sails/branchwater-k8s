@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: react-ingress
+  namespace: mgnifybranchwater-hl-prod
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+    - host: branchwater-dev.mgnify.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ebi-metagenomics-client-service
+                port:
+                  number: 8000

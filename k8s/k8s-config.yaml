@@ -22,7 +22,7 @@ items:
         - host: branchwater-dev.mgnify.org
           http:
             paths:
-              - path: /
+              - path: /temp
                 pathType: Prefix
                 backend:
                   service:

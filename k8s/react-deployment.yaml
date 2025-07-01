@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ebi-metagenomics-client
+  namespace: mgnifybranchwater-hl-prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ebi-metagenomics-client
+  template:
+    metadata:
+      labels:
+        app: ebi-metagenomics-client
+    spec:
+      containers:
+        - name: ebi-metagenomics-client
+          image: mgsdev/ebi-metagenomics-client:latest
+          ports:
+            - containerPort: 80
