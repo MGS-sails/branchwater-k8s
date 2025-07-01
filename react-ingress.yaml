@@ -10,7 +10,7 @@ spec:
     - host: branchwater-dev.mgnify.org
       http:
         paths:
-          - path: /metagenomics
+          - path: /metagenomics/
             pathType: Prefix
             backend:
               service:
