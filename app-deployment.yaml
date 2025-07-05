@@ -21,17 +21,17 @@ spec:
         envFrom:
         - configMapRef:
             name: prod-env
-#        volumeMounts:
-#        - name: app-volume
-#          mountPath: /app
+        volumeMounts:
+        - name: signatures-volume
+          mountPath: /signatures
 
 #        - name: app-data-volume
 #          mountPath: /data
 
-#      volumes:
-#      - name: app-volume
-#        persistentVolumeClaim:
-#          claimName: app-pvc
+      volumes:
+      - name: signatures-volume
+        persistentVolumeClaim:
+          claimName: signatures-pvc
 #
 #      - name: app-data-volume
 #        persistentVolumeClaim:
