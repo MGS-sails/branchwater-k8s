@@ -26,7 +26,7 @@ spec:
       volumes:
       - name: bw-db
         persistentVolumeClaim:
-          claimName: index-pvc
+          claimName: index-updated-sketches-pvc
       - name: mongodb-data
         persistentVolumeClaim:
-          claimName: mongodb-data-pvc
+          claimName: mongodb-updated-sketches-pvc

@@ -22,7 +22,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: updated-sketches-pvc
+  name: index-updated-sketches-pvc
   namespace: mgnifybranchwater-hl-prod
 spec:
   accessModes:
@@ -32,6 +32,19 @@ spec:
       storage: 5Gi
   volumeName: updated-sketches-pv
   storageClassName: standard
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongodb-updated-sketches-pvc
+  namespace: mgnifybranchwater-hl-prod
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
 
 
 #---

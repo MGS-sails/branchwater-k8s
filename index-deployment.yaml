@@ -27,4 +27,4 @@ spec:
       volumes:
       - name: bw-db
         persistentVolumeClaim:
-          claimName: index-pvc
+          claimName: index-updated-sketches-pvc
