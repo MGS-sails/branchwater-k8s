@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
       - name: app
-        image: mgsdev/mgnify-bw-app:latest
+        image: mgsdev/mgnify-bw-app@sha256:4fc39e514df763aac59df2bfa8a5a0e50b7d906331c112ea8b21e71f6cdcd560
+#        image: mgsdev/mgnify-bw-app:latest
         ports:
         - containerPort: 8000
         envFrom:
@@ -25,13 +26,17 @@ spec:
         - name: signatures-volume
           mountPath: /signatures
 
-#        - name: app-data-volume
-#          mountPath: /data
+        - name: index-updated-sketches-volume
+          mountPath: /data
 
       volumes:
       - name: signatures-volume
         persistentVolumeClaim:
           claimName: signatures-pvc
+
+      - name: index-updated-sketches-volume
+        persistentVolumeClaim:
+          claimName: index-updated-sketches-pvc
 #
 #      - name: app-data-volume
 #        persistentVolumeClaim:

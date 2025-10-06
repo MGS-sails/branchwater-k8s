@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: metadata-deployment
+  namespace: mgnifybranchwater-hl-prod
+  labels:
+    app: metadata-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: metadata-deployment
+  template:
+    metadata:
+      name: metadata-deployment
+      labels:
+        app: metadata-deployment
+    spec:
+      containers:
+        - name: metadata-deployment
+          image: mgsdev/bw-metadata-prep
+          ports:
+          - containerPort: 84
+          envFrom:
+            - configMapRef:
+                name: prod-env
+          volumeMounts:
+            - mountPath: /data/bw_db
+              name: bw-db
+      volumes:
+        - name: bw-db
+          persistentVolumeClaim:
+            claimName: index-updated-sketches-pvc

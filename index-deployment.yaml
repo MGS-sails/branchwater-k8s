@@ -15,6 +15,7 @@ spec:
     spec:
       containers:
       - name: index
+#        image: mgsdev/mgnify-bw-index-alpha:latest
         image: mgsdev/mgnify-bw-index:latest
         ports:
         - containerPort: 80
@@ -27,4 +28,6 @@ spec:
       volumes:
       - name: bw-db
         persistentVolumeClaim:
-          claimName: index-updated-sketches-pvc
+          claimName: complete-index-pvc
+#          claimName: ucd-index-pvc
+#          claimName: index-updated-sketches-pvc
