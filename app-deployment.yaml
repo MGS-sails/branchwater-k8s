@@ -17,6 +17,7 @@ spec:
       - name: app
         image: mgsdev/mgnify-bw-app@sha256:4fc39e514df763aac59df2bfa8a5a0e50b7d906331c112ea8b21e71f6cdcd560
 #        image: mgsdev/mgnify-bw-app:latest
+#        image: mgsdev/mgnify-bw-app-alpha:latest
         ports:
         - containerPort: 8000
         envFrom:
