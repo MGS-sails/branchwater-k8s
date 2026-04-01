@@ -15,6 +15,19 @@ spec:
     spec:
       containers:
         - name: ebi-metagenomics-client
-          image: mgsdev/ebi-metagenomics-client:latest
+          image: quay.io/microbiome-informatics/ebi-metagenomics-client@sha256:e9f5f8f18d356c1bd8e4202a2c1e066b9a7820e4d3462049c037d04376dd65d7
+#          image: quay.io/microbiome-informatics/ebi-metagenomics-client@sha256:c330890ca63c24e1994a201984a014df41e53e507c278d01d507c51ec67a2a0e
+#          image: quay.io/microbiome-informatics/ebi-metagenomics-client@sha256:2229a3a82566c4c83d54450524382bebe88272db31f4ab25ce9f3bfdae322009
+#          image: quay.io/microbiome-informatics/ebi-metagenomics-client@sha256:57b5b1b7a47a2664413adc800b2127242f41f4b77f220f850c7dad8c5c169e74
+#          image: quay.io/microbiome-informatics/ebi-metagenomics-client@sha256:47bd47ff3201ed4270c0917af928eaf2fdb470794bee9db96d295347f6a64eaa
+#          image: quay.io/microbiome-informatics/ebi-metagenomics-client@sha256:689ddca756d177b0448835bc5413fa95039ab7a32e7601417a7c2287303666c4
+#          image: quay.io/microbiome-informatics/ebi-metagenomics-client@sha256:11a9a208fb5073db90a4aea421b4ba6084faddccf0d0920b9e27a545642b82a3
+#          image: quay.io/microbiome-informatics/ebi-metagenomics-client@sha256:de6cc18e34984e5f4213ed0a5cb70133e2dade7e506504a216618b2ed8e789a2
+#          image: quay.io/microbiome-informatics/ebi-metagenomics-client@sha256:9c21fc75308df2f45483b5bd8d2280b6710b684a670e0a7aba2917db87ee4646
+#          image: quay.io/microbiome-informatics/ebi-metagenomics-client@sha256:3b1b14a67c5d72adc464b36427963ec6e7ebe95ed477f7ca0822b4ecfd361d72
+#          image: mgsdev/ebi-metagenomics-client@sha256:5c91c6674f2bded86c2815a8e2706c59d3f644ddc74851b5663c051c53345979
+#          image: mgsdev/ebi-metagenomics-client@sha256:5f4329adcb479710d03a47ef0f2efbb3e6fd4c8c6232ac5f402a676f208838e2
+#          image: mgsdev/ebi-metagenomics-client@sha256:74c23872a01853109660c0d7e919ba9c0b4411cde79a550e82a962dc178663f0
+#          image: mgsdev/ebi-metagenomics-client:latest
           ports:
             - containerPort: 80
