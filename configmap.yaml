@@ -7,4 +7,4 @@ data:
   HTTPS_PROXY: "http://hh-wwwcache.ebi.ac.uk:3128"
   http_proxy: "http://hh-wwwcache.ebi.ac.uk:3128"
   https_proxy: "http://hh-wwwcache.ebi.ac.uk:3128"
-  no_proxy: "localhost,.cluster.local"
+  no_proxy: "localhost,.cluster.local,app-service,index-service,mongodb-service,ebi-metagenomics-client-service"
