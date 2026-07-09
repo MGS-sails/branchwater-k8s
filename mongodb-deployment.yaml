@@ -16,6 +16,13 @@ spec:
       containers:
       - name: mongodb
         image: mgsdev/mgnify-bw-mongodb:latest
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "500m"
+          limits:
+            memory: "4Gi"
+            cpu: "1000m"
         ports:
         - containerPort: 27017
         envFrom:
