@@ -15,6 +15,12 @@ spec:
     spec:
       containers:
         - name: ebi-metagenomics-client
-          image: mgsdev/ebi-metagenomics-client:latest
+#          image: mgsdev/ebi-metagenomics-client@sha256:fb9ce37039b591c5a63c92fefa3b0ed6c4fc337efbfa5e42770eaf8fe90cdcc0
+#          image: mgsdev/ebi-metagenomics-client@sha256:9d778e60554af007d47793b84c338d72f2f5a06044528f92c7c17a00b9645137
+#          image: mgsdev/ebi-metagenomics-client@sha256:13d752c4c1490569c096f2d5da0c42e2c604e3e11121d777c484dd3e2e1267a6
+#          image: mgsdev/ebi-metagenomics-client@sha256:c49d96a5566c28eb7f162afc56f3ca6e963f40b5f04ec100d31acd81b784f9a6
+#          image: mgsdev/ebi-metagenomics-client@sha256:3f2a4562a4426357584e31f79a2c83f8ec55d7aae7d484babb8424e637f69016 -> LATEST WORKING VERSION
+          image: mgsdev/ebi-metagenomics-client@sha256:b641cc6ad0c08b961a244232fb4ac3aa6d1fa8ee9154e4c79c9074e2837cd336
+#          image: mgsdev/ebi-metagenomics-client:latest
           ports:
             - containerPort: 80

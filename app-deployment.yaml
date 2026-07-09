@@ -15,9 +15,26 @@ spec:
     spec:
       containers:
       - name: app
-        image: mgsdev/mgnify-bw-app@sha256:4fc39e514df763aac59df2bfa8a5a0e50b7d906331c112ea8b21e71f6cdcd560
+        image: mgsdev/mgnify-bw-app-alpha@sha256:6336579f8c0eb8c47b2290b0c9469c040848d79789cac9673d6d88d33c5ded99
+#        image: mgsdev/mgnify-bw-app@sha256:4fc39e514df763aac59df2bfa8a5a0e50b7d906331c112ea8b21e71f6cdcd560
 #        image: mgsdev/mgnify-bw-app:latest
 #        image: mgsdev/mgnify-bw-app-alpha:latest
+#        image: mgsdev/mgnify-bw-app-alpha@sha256:9208a815f854bed73898f70fb7634f0b966cd8e788cc231bfe58ab7860a791cb
+#        image: mgsdev/mgnify-bw-app-alpha@sha256:9f2473c6152b5dd939467a4ca411b9c7c337bf343dcb67f05666150206902ffc
+#        image: mgsdev/mgnify-bw-app-alpha@sha256:3e83d11b2505707d8acbf5a8b72555068781beca679a1a20f5072d477a49c62c
+        command:  ["/bin/bash", "/shell-hook"]
+#        args: ["exec gunicorn -b 0.0.0.0:8000 --timeout 120 --workers 4 --access-logfile - main:app"]
+        args: [
+          "gunicorn",
+          "-b", "0.0.0.0:8000",
+          "--timeout", "120",
+          "--workers", "4",
+          "--access-logfile", "-",
+          "main:app"
+        ]
+#        command:  ["gunicorn", "-b", "0.0.0.0:8000", "--timeout", "120", "--workers", "4", "--access-logfile", "-", "main:app"]
+##        command:  ["python3", "main.py"]
+#        args: []
         ports:
         - containerPort: 8000
         envFrom:
